@@ -50,17 +50,19 @@ $(document).ready(function(){
   			if (Math.abs(secret-guess)==0) {
   				$('#feedback').text('You Win!');
   				newGame();
-  			} else if(1<Math.abs(secret-guess)<=10) {
+  			} else if(Math.abs(secret-guess)<=10) {
   				$('#feedback').text('Scortchin\' Hot');
-  			} else if(10<Math.abs(secret-guess)<=20) {
+  			} else if(Math.abs(secret-guess)<=20) {
   				$('#feedback').text('Hot');
-  			} else if(20<Math.abs(secret-guess)<=30) {
+  			} else if(Math.abs(secret-guess)<=30) {
   				$('#feedback').text('Warm');
-  			} else if(30<Math.abs(secret-guess)<=50) {
+  			} else if(Math.abs(secret-guess)<=50) {
   				$('#feedback').text('Cold');
   			} else {
   				$('#feedback').text('Freezing');
   			}
+  			console.log(secret);
+  			console.log(guess);
   		} 		
   	});
 
